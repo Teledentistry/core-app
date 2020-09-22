@@ -1,5 +1,9 @@
 import React from "react";
+import "antd/dist/antd.css";
+
+import Navbar from "./components/commons/Navbar";
+
 function App() {
-  return <h1>Welcome to the app</h1>;
+  return <Navbar />;
 }
 export default App;
