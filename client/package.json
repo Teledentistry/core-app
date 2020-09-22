@@ -16,14 +16,15 @@
     "react-scripts": "3.4.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.0",
-    "tailwindcss": "^1.8.10",
     "twin.macro": "^1.9.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "INLINE_RUNTIME_CHUNK=false npm run build:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,5 +41,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.8.10"
+  }
 }
