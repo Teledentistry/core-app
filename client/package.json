@@ -23,8 +23,8 @@
     "twin.macro": "^1.9.0"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "cross-env INLINE_RUNTIME_CHUNK=false npm run build:css && react-scripts build",
+    "start": "react-scripts start",
+    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
