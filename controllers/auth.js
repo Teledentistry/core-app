@@ -111,9 +111,6 @@ const sendTokenResponse = (user, statusCode, res) => {
   });
 };
 
-// @desc      Login and Register through google
-// @route     POST /api/v1/auth/google-login
-// @access    Public
 // const client = new OAuth2Client(
 //   process.env.GOOGLE_CLIENT_ID,
 //   process.env.GOOGLE_CLIENT_SECRET,
