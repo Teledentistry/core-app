@@ -11,7 +11,8 @@ const cors = require("cors");
 const errorHandler = require("./middleware/error");
 
 const auth = require("./routes/auth");
-// const users = require("./routes/users");
+const users = require("./routes/users");
+const articles = require('./routes/article');
 
 const app = express();
 
@@ -43,7 +44,8 @@ app.use(hpp());
 app.use(cors());
 
 app.use("/api/v1/auth", auth);
-// app.use("/api/v1/users", users);
+app.use("/api/v1/users", users);
+app.use("/api/v1/article", articles);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
