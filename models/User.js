@@ -28,6 +28,18 @@ const UserSchema = new mongoose.Schema({
     minlength: 6,
     select: false,
   },
+  specialization: {
+    type: String,
+    default: "no specialization",
+  },
+  hospital: {
+    type: String,
+    default: "no hospital",
+  },
+  aboutMe: {
+    type: String,
+    default: "",
+  },
   resetPasswordToken: String,
   resetPasswordExpire: Date,
   createdAt: {
