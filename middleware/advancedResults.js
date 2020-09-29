@@ -1,5 +1,5 @@
-const advancedResults = (model, populate) => async (req, res, next) => {
-  let query;
+const advancedResults = (model, populate, populate2) => async (req, res, next) => {
+let query;
 
   // Copy req.query
   const reqQuery = { ...req.query };
@@ -38,6 +38,10 @@ const advancedResults = (model, populate) => async (req, res, next) => {
 
   if (populate) {
     query = query.populate(populate);
+  }
+
+  if(populate2) {
+    query = query.populate(populate2);
   }
 
   // Executing query

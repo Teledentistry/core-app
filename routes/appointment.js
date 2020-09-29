@@ -13,7 +13,7 @@ const router = express.Router();
 
 router
   .route("/")
-  .get(advancedResults(Appointment, "doctor"), getAppointments)
+  .get(advancedResults(Appointment, "doctor", "patient"), getAppointments)
   .post(protect, createAppointment);
 
 router
